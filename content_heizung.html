@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Heizung</title>
+</head>
+
+<body>
+    <div class="page" id="heizung">
+        <div class="gridster">
+            <ul>
+            	<li data-row="1" data-col="1" data-sizex="4" data-sizey="4">
+                	<Header>Ölheizung</header>
+                	<div class="sheet">
+                        <table width="100%" height="100%">
+                            <tr height="10%">
+                                <td align="right">
+                                    ebus running    
+                                </td>
+                                <td>
+                                    <div class="" 
+                                         data-type="symbol" 
+                                         data-device="EBUS_MQTT" 
+                                         data-get="running"
+                                         data-states='["true","false"]' 
+                                         data-icons='["fa-check","fa-exclamation-triangle"]' 
+                                         data-colors='["SeaGreen","Crimson"]'>
+                                    </div>
+                                </td>
+                                <td align="right">
+                                    ebus signal    
+                                </td>
+                                <td>
+                                    <div class="" 
+                                         data-type="symbol" 
+                                         data-device="EBUS_MQTT" 
+                                         data-get="signal"
+                                         data-states='["true","false"]' 
+                                         data-icons='["fa-check","fa-exclamation-triangle"]' 
+                                         data-colors='["SeaGreen","Crimson"]'>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr height="10%">
+                                <td align="right">
+                                    Brenner    
+                                </td>
+                                <td>
+                                    <div class="" 
+                                         data-type="symbol" 
+                                         data-device="Heizung" 
+                                         data-get="Brenner"
+                                         data-states='["an","aus"]' 
+                                         data-icons='["fa-fire","fa-fire"]' 
+                                         data-colors='["orange","grey"]'>
+                                    </div>
+                                </td>
+                                <td>
+                                </td>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr height="50%">
+                                <td align="right">
+                                    <div class="bigger" align="right"
+                                         data-type="label"
+                                         data-device="Heizung"
+                                         data-get="Kesseltemp"
+                                         data-limits=[20,40,60,80]
+                                         data-colors=["blue","green","orange","red"]
+                                         data-post-text=" °C"
+                                    ></div>
+                                    <div align="right">
+                                      Kessel
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="cell"
+                                         data-type="scale"
+                                         data-device="Heizung"
+                                         data-get="Kesseltemp"
+                                         data-limits=[20,40,60,80]
+                                         data-colors=["blue","green","orange","red"]
+                                         data-min="20"
+                                         data-max="100"
+                                         data-tick="10"
+                                         data-orientation="vertical" 
+                                         data-font-size="12"
+                                         data-value-interval="2"
+                                    ></div>
+                                </td >
+                                <td align="right">
+                                    <div class="bigger" align="right"
+                                         data-type="label"
+                                         data-device="Heizung"
+                                         data-get="Wassertemp"
+                                         data-limits=[0,25,35,56]
+                                         data-colors=["blue","green","orange","red"]
+                                         data-post-text=" °C"
+                                    ></div>
+                                    <div align="right">
+                                      Warmwasser
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class=""
+                                         data-type="scale"
+                                         data-device="Heizung"
+                                         data-get="Wassertemp"
+                                         data-limits=[0,25,35,56]
+                                         data-colors=["blue","green","orange","red"]
+                                         data-min="0"
+                                         data-max="80"
+                                         data-tick="1"
+                                         data-orientation="vertical" 
+                                         data-font-size="12"
+                                         data-value-interval="5"
+                                    ></div>
+                                </td>
+                            </tr>
+                        </table>
+                	</div>
+      			</li>
+            	<li data-row="1" data-col="4" data-sizex="4" data-sizey="4">
+                	<Header>Solaranlage</header>
+                    <div class="sheet">
+                        <table width="100%" height="100%">
+                            <tr height="10%">
+                                <td>
+                                </td>
+                                <td>
+                                </td>
+                                <td align="right">
+                                    Pumpenleistung    
+                                </td>
+                                <td>
+                                <div class="small readonly" 
+                                    data-type="knob"
+                                    data-device="Solaranlage"
+                                    data-get="speed_R1"
+                                    data-part="1"
+                                    data-anglearc="360"
+                                    data-angleoffset="0"
+                                    data-min="0"
+                                    data-max="100"
+                                    data-nomcolor="#FFFFFF"
+                                    data-fgcolor="#FFFFFF"
+                                    data-bgcolor="#00A1DE"
+                                    data-unit="%"></div>
+                                </td>
+                            </tr>
+                            <tr height="50%">
+                                <td align="right">
+                                    <div class="bigger" align="right"
+                                         data-type="label"
+                                         data-device="Solaranlage"
+                                         data-get="temperature_T01"
+                                         data-limits=[0,25,45,60]
+                                         data-colors=["blue","green","orange","red"]
+                                         data-post-text=" °C"
+                                    ></div>
+                                    <div align="right">
+                                      Kollektor
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="prefetch cell"
+                                         data-type="scale"
+                                         data-device="Solaranlage"
+                                         data-get="temperature_T01"
+                                         data-limits=[0,25,45,60]
+                                         data-colors=["blue","green","orange","red"]
+                                         data-min="0"
+                                         data-max="100"
+                                         data-tick="5"
+                                         data-orientation="vertical" 
+                                         data-font-size="12"
+                                         data-value-interval="2"
+                                    ></div>
+                                </td >
+                                <td align="right">
+                                    <div class="bigger" align="right"
+                                         data-type="label"
+                                         data-device="Solaranlage"
+                                         data-get="temperature_T02"
+                                         data-limits=[0,25,35,56]
+                                         data-colors=["blue","green","orange","red"]
+                                         data-post-text="°C"
+                                    ></div>
+                                    <div align="right">
+                                      Schichtspeicher
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class=""
+                                         data-type="scale"
+                                         data-device="Solaranlage"
+                                         data-get="temperature_T02"
+                                         data-limits=[0,25,35,56]
+                                         data-colors=["blue","green","orange","red"]
+                                         data-min="0"
+                                         data-max="80"
+                                         data-tick="1"
+                                         data-orientation="vertical" 
+                                         data-font-size="12"
+                                         data-value-interval="5"
+                                    ></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+      			</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

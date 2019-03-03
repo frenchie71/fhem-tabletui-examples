@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Netzwerk</title>
+</head>
+
+<body>
+    <div class="page" id="netzwerk">
+        <div class="gridster">
+            <ul>
+            	<li data-row="1" data-col="3" data-sizex="3" data-sizey="4">
+            		<header>Stromversorgung</header>
+            		<cell>
+            		<table width="95%" height="30%">
+            			<tr height="5%">
+            			</tr>
+            			<tr height="10%">
+            				<td class="big" width="50%" align="right">
+            				Netzsp.
+            				</td>
+            				<td>
+                                    <div class="" 
+                                         data-type="symbol" 
+                                         data-device="SV_UG_Netzschalter_Schaltschrank" 
+                                         data-get="STATE"
+                                         data-states='["alive","dead"]' 
+                                         data-icon="fa-question"
+                                         data-icons='["fa-check","fa-exclamation-triangle"]' 
+                                         data-colors='["SeaGreen","Crimson"]'>
+                                    </div>
+							</td>
+						</tr>
+            			<tr height="10%">
+            				<td class="big"  align="right">
+            				USV
+            				</td>
+            				<td>
+                                    <div class="" 
+                                         data-type="symbol" 
+                                         data-device="SV_UG_USV_Schaltschrank" 
+                                         data-get="STATE"
+                                         data-states='["alive","dead"]' 
+                                         data-icon="fa-question"
+                                         data-icons='["fa-check","fa-exclamation-triangle"]' 
+                                         data-colors='["SeaGreen","Crimson"]'>
+                                    </div>
+							</td>
+						</tr>
+            			<tr height="10%">
+            				<td class="big"  align="right">
+            				POE
+            				</td>
+            				<td>
+                                    <div class="" 
+                                         data-type="symbol" 
+                                         data-device="SV_UG_Netzteil_Schaltschrank" 
+                                         data-get="status"
+                                         data-icon="fa-question"
+                                         data-states='["alive","dead"]' 
+                                         data-icons='["fa-check","fa-exclamation-triangle"]' 
+                                         data-colors='["SeaGreen","Crimson"]'>
+                                    </div>
+							</td>
+						</tr>
+					</table>
+					<table width="90%" height="60%">
+            			<tr height="80%">
+            				<td width="33%">
+                                    <div class=""
+                                         data-type="scale"
+                                         data-device="SV_UG_Netzteil_Schaltschrank"
+                                         data-get="Strom12V"
+                                         data-limits=[1,2,5]
+                                         data-colors=["green","orange","red"]
+                                         data-min="0"
+                                         data-max="5000"
+                                         data-tick="100"
+                                         data-extra-tick="1000"
+                                         data-orientation="vertical" 
+                                         data-font-size="12"
+                                         data-value-interval="1000"
+                                         data-part="1"
+                                         data-substitution="s/\.//g"
+                                    ></div>
+            				</td>
+
+            				<td width="33%">
+                                    <div class=""
+                                         data-type="scale"
+                                         data-device="SV_UG_Netzteil_Schaltschrank"
+                                         data-get="Strom48V"
+                                         data-limits=[0,1,2]
+                                         data-colors=["green","orange","red"]
+                                         data-min="0"
+                                         data-max="2000"
+                                         data-tick="50"
+                                         data-extra-tick="500"
+                                         data-orientation="vertical" 
+                                         data-font-size="12"
+                                         data-value-interval="500"
+                                         data-part="1"
+                                         data-substitution="s/\.//g"
+                                    ></div>
+            				</td>
+            				<td width="33%">
+                                    <div class=""
+                                         data-type="scale"
+                                         data-device="SV_UG_Netzteil_Schaltschrank"
+                                         data-get="Temperatur"
+                                         data-limits=[20,30,35,40]
+                                         data-colors=["blue","green","orange","red"]
+                                         data-min="20"
+                                         data-max="45"
+                                         data-tick="1"
+                                         data-extra-tick="5"
+                                         data-orientation="vertical" 
+                                         data-font-size="12"
+                                         data-value-interval="5"
+                                         data-part="1"
+                                         XXdata-substitution="s/\.//g"
+                                    ></div>
+							</td>
+						</tr>
+            			<tr height="20%">
+            				<td width="33%">
+								<div class="small" data-type="label" data-device="SV_UG_Netzteil_Schaltschrank" data-get="Strom12V"></div>
+								<div class="big" data-type="label" data-device="SV_UG_Netzteil_Schaltschrank" data-get="Spannung12V"></div>
+            				</td>
+
+            				<td width="33%">
+								<div class="small" 
+                                         data-type="label"
+                                         data-device="SV_UG_Netzteil_Schaltschrank"
+                                         data-get="Strom48V"
+								></div>
+								<div class="big" data-type="label" data-device="SV_UG_Netzteil_Schaltschrank" data-get="Spannung48V"></div>
+            				</td>
+            				<td width="33%">
+                                    <div class="big"
+                                         data-type="label"
+                                         data-device="SV_UG_Netzteil_Schaltschrank"
+                                         data-get="Temperatur"
+                                    ></div>
+							</td>
+
+
+						</tr>
+
+
+					</table>
+            		</cell>
+            	</li>
+            	<li data-row="1" data-col="1" data-sizex="2" data-sizey="6">
+            		<header>Netzwerkstatus</header>
+            		<cell>
+            		<table width="95%" height="95%">
+            			<tr height="10%">
+            				<td class="big" width="70%" align="right">
+            				Router
+            				</td>
+            				<td>
+                                    <div class="" 
+                                         data-type="symbol" 
+                                         data-device="router_eg" 
+                                         data-get="STATE"
+                                         data-states='["present","absent"]' 
+                                         data-icons='["fa-check","fa-exclamation-triangle"]' 
+                                         data-colors='["SeaGreen","Crimson"]'>
+                                    </div>
+							</td>
+						</tr>
+            			<tr height="10%">
+            				<td class="big" width="70%" align="right">
+            				DSL
+            				</td>
+            				<td>
+                                    <div class="" 
+                                         data-type="symbol" 
+                                         data-device="router_dsl" 
+                                         data-get="STATE"
+                                         data-states='["present","absent"]' 
+                                         data-icons='["fa-check","fa-exclamation-triangle"]' 
+                                         data-colors='["SeaGreen","Crimson"]'>
+                                    </div>
+							</td>
+						</tr>
+            			<tr height="10%">
+            				<td class="big" width="70%" align="right">
+            				Google
+            				</td>
+            				<td>
+                                    <div class="" 
+                                         data-type="symbol" 
+                                         data-device="google" 
+                                         data-get="STATE"
+                                         data-states='["present","absent"]' 
+                                         data-icons='["fa-check","fa-exclamation-triangle"]' 
+                                         data-colors='["SeaGreen","Crimson"]'>
+                                    </div>
+							</td>
+						</tr>
+            			<tr height="10%">
+            				<td class="big" align="right">
+            				Docker
+            				</td>
+            				<td>
+							</td>
+						</tr>
+            			<tr height="10%">
+            				<td class="big" align="right">
+            				File
+            				</td>
+            				<td>
+							</td>
+						</tr>
+            			<tr height="10%">
+            				<td class="big" align="right">
+            				Mail
+            				</td>
+            				<td>
+							</td>
+						</tr>
+            			<tr height="10%">
+            				<td class="big" align="right">
+            				VDR
+            				</td>
+            				<td>
+							</td>
+						</tr>
+            			<tr height="10%">
+            				<td class="big" align="right">
+            				Shinobi
+            				</td>
+            				<td>
+							</td>
+						</tr>
+            			<tr height="10%">
+            				<td class="big" align="right">
+            				Backup
+            				</td>
+            				<td>
+							</td>
+						</tr>
+					</table>
+           		</cell>
+           	</li>
+           	<li data-row="1" data-col="6" data-sizex="3" data-sizey="4">
+            		<header>Druckerstatus</header>
+            		<cell>
+            		<table width="95%" height="95%">
+            			<tr height="10%">
+								<div class="bigger blue" data-type="label" data-device="Druckerstatus" data-get="STATE"></div>
+						</tr>
+						<tr height="40%">
+							<td width="50%">
+								<div class="small readonly" 
+									data-type="knob"
+									data-device="Druckerpatronenstatus"
+									data-get="Black"
+									data-part="1"
+									data-anglearc="360"
+									data-angleoffset="0"
+									data-min="0"
+									data-max="100"
+									data-nomcolor="#FFFFFF"
+									data-fgcolor="#000000"
+									data-bgcolor="#00A1DE"
+									data-unit="%"></div>
+								<div data-type="label" class="big">Schwarz</div>
+							</td>
+							<td width="40%">							
+								<div class="small readonly" 
+									data-type="knob"
+									data-device="Druckerpatronenstatus"
+									data-get="Cyan"
+									data-part="1"
+									data-anglearc="360"
+									data-angleoffset="0"
+									data-min="0"
+									data-max="100"
+									data-nomcolor="#FFFFFF"
+									data-fgcolor="#00FFFF"
+									data-bgcolor="#00A1DE"
+									data-unit="%"></div>
+								<div data-type="label" class="big">Zyan</div>
+							</td>
+						</tr>							
+						<tr>
+							<td>
+								<div class="row-60 small readonly" 
+									data-type="knob"
+									data-device="Druckerpatronenstatus"
+									data-get="Yellow"
+									data-part="1"
+									data-anglearc="360"
+									data-angleoffset="0"
+									data-min="0"
+									data-max="100"
+									data-nomcolor="#FFFFFF"
+									data-fgcolor="#FFFF00"
+									data-bgcolor="#00A1DE"
+									data-unit="%"></div>
+								<div data-type="label" class="big">Gelb</div>
+							</td>
+							<td>							
+								<div class="row-60 small readonly" 
+									data-type="knob"
+									data-device="Druckerpatronenstatus"
+									data-get="Magenta"
+									data-part="1"
+									data-anglearc="360"
+									data-angleoffset="0"
+									data-min="0"
+									data-max="100"
+									data-nomcolor="#FFFFFF"
+									data-fgcolor="#FF00FF"
+									data-bgcolor="#00A1DE"
+									data-unit="%"></div>
+								<div data-type="label" class="big">Magenta</div>
+							</td>
+						</tr>
+					</table>
+					</cell>	
+				</li>
+            	<li data-row="4" data-col="4" data-sizex="3" data-sizey="2">
+            		<header>Backup-Status</header>
+            		<cell>
+            		<table width="95%" height="80%">
+            			<tr height="10%">
+            				<td class="big" width="30%"  align="right">
+            				Archiv
+            				</td>
+            				<td>
+								<div class="small" data-type="label" data-device="BACKUP" data-get="archive"></div>
+							</td>
+						</tr>
+            			<tr height="10%">
+            				<td class="big" align="right">
+            				Mail
+            				</td>
+            				<td>
+								<div class="small" data-type="label" data-device="BACKUP" data-get="localdata"></div>
+							</td>
+						</tr>
+            			<tr height="10%">
+            				<td class="big" align="right">
+            				Fotos
+            				</td>
+            				<td>
+								<div class="small" data-type="label" data-device="BACKUP" data-get="fotos"></div>
+							</td>
+						</tr>
+            			<tr height="10%">
+            				<td class="big" align="right">
+            				MP3
+            				</td>
+            				<td>
+								<div class="small" data-type="label" data-device="BACKUP" data-get="mp3"></div>
+							</td>
+						</tr>
+            			<tr height="10%">
+            				<td class="big" align="right">
+            				Sources
+            				</td>
+            				<td>
+								<div class="small" data-type="label" data-device="BACKUP" data-get="sourcecode"></div>
+							</td>
+						</tr>
+					</table>
+            		</cell>
+            	</li>
+			</ul>
+        </div>
+    </div>
+</body>
+
+</html>

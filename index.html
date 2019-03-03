@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+     /* FHEM tablet ui */
+     /*
+     * UI builder framework for FHEM
+     *
+     * Version: 2.5.*
+     * URL: https://github.com/knowthelist/fhem-tablet-ui
+     *
+     * Copyright (c) 2015-2017 Mario Stephan <mstephan@shared-files.de>
+     * Under MIT License (http://www.opensource.org/licenses/mit-license.php)
+     *
+     * - create a new folder named 'tablet' in /<fhem-path>/www
+     * - copy all files incl. sub folders into /<fhem-path>/www/tablet
+     * - add 'define TABLETUI HTTPSRV ftui ./www/tablet Tablet' in fhem.cfg
+     * - Tadaaa! A new fhem ui in http://<fhem-url>:8083/fhem/tablet/
+     */
+    -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+
+    <!-- define your personal style here, it wont be overwritten  -->
+    <!-- link rel="stylesheet" href="css/fhem-green-ui.css" / -->
+    <!-- link rel="stylesheet" href="css/fhem-tablet-ui-user.css" / -->
+
+    <script src="js/fhem-tablet-ui.js" defer></script>
+
+
+    <!-- Remove this line to enable for usage with WebViewControl
+    <script defer>var wvcDevices = {'12345': 'Tablet'}; var wvcUserCssFile="webviewcontrol.css"</script>
+    <script src="../pgm2/cordova-2.3.0.js" defer></script>
+    <script src="../pgm2/webviewcontrol.js" defer></script>
+    <!-- End for WebViewControl -->
+
+    <title>FHEM-Tablet-UI</title>
+</head>
+
+<body>
+
+    <div class="gridster">
+        <ul>
+            <li data-row="1" data-col="1" data-sizex="1" data-sizey="6">
+                <div class="sheet">
+
+                   <div class="row-15">
+                        <div class="cell">
+                            <div data-type="pagebutton" data-url="#content_dashboard.html" data-load="#dashboard" data-active-pattern="(.*/||.*#content_dashboard.html)" data-icon="fa-home" class="default cell"></div>
+                        </div>
+                    </div>
+                    <div class="row-15">
+                        <div class="cell">
+                            <div data-type="pagebutton" data-url="#content_wetter.html" data-load="#wetter" data-active-pattern=".*#content_wetter.html" data-icon="wi wi-day-rain-mix" class="cell"></div>
+                        </div>
+                    </div>
+                    <div class="row-15">
+                        <div class="cell">
+                            <div data-type="pagebutton" data-url="#content_heizung.html" data-load="#heizung" data-active-pattern=".*#content_heizung.html" data-icon="fa-fire" class="cell"></div>
+                        </div>
+                    </div>
+                    <div class="row-15">
+                        <div class="cell">
+                            <div data-type="pagebutton" data-url="#content_netzwerk.html" data-load="#netzwerk" data-active-pattern=".*#content_netzwerk.html" data-icon="mi-device_hub" class="cell"></div>
+                        </div>
+                    </div>
+                    <div class="row-15">
+                        <div class="cell">
+                            <div data-type="pagebutton" data-url="#content_alarm.html" data-load="#alarm" data-active-pattern=".*#content_alarm.html" data-icon="fa-bell" class="prefetch cell"></div>
+                        </div>
+                    </div>
+                    <div class="row-15">
+                        <div class="cell">
+                            <div data-type="pagebutton" data-url="#content_kameras.html" data-load="#kameras" data-active-pattern=".*#content_kameras.html" data-icon="fa-video" class="cell"></div>
+                        </div>
+                    </div>
+                    <div class="row-15">
+                        <div class="cell">
+                        </div>
+                    </div>
+                </div>           
+            </li>
+
+            <li data-row="1" data-col="2" data-sizex="8" data-sizey="6">
+                <div class="page" id="dashboard"></div>
+                <div class="page" id="wetter"></div>
+                <div class="page" id="heizung"></div>
+                <div class="page" id="netzwerk"></div>
+                <div class="page" id="alarm"></div>
+                <div class="page" id="kameras"></div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

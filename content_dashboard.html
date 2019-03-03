@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div class="page" id="dashboard">
+        <div class="gridster">
+            <ul>
+
+            <li data-row="1" data-col="1" data-sizex="2" data-sizey="2">
+                <Header>Außentemp. oben</header>
+                <div class="sheet">
+                    <div class="col-50"
+                     data-type="scale"
+                     data-device="Aussentemperatur_oben"
+                     data-get="temperature"
+                     data-limits=[-10,10,20,28]
+                     data-colors=["blue","green","orange","red"]
+                     data-min="-10"
+                     data-max="35"
+                     data-tick="1"
+                     data-orientation="vertical" 
+                     data-font-size="12"
+                     data-value-interval="2"
+                    ></div>
+                    <div class="col-50">
+                        <br><br>Temperatur:<br><br>
+                        <div class="bigger"
+                            data-type="label"
+                            data-device="Aussentemperatur_oben"
+                            data-get="temperature"
+                            data-limits=[-10,10,20,28]
+                            data-colors=["blue","green","orange","red"]
+                            data-post-text="°C"
+                        ></div>
+                        <br><br>Luftfeuchtigkeit<br><br>
+                        <div class="bigger"
+                            data-type="label"
+                            data-device="Aussentemperatur_oben"
+                            data-get="humidity"
+                            data-limits=[0,40,70]
+                            data-colors=["red","green","red"]
+                            data-post-text="&#037;"
+                        ></div>
+                    </div>        
+                </div>
+            </li>
+
+
+            <li data-row="1" data-col="3" data-sizex="2" data-sizey="2">
+                <Header>Außentemp. unten</header>
+                <div class="sheet">
+                    <div class="col-50"
+                     data-type="scale"
+                     data-device="Aussentemperatur_unten"
+                     data-get="temperature"
+                     data-limits=[-10,10,20,28]
+                     data-colors=["blue","green","orange","red"]
+                     data-min="-10"
+                     data-max="35"
+                     data-tick="1"
+                     data-orientation="vertical" 
+                     data-font-size="12"
+                     data-value-interval="2"
+                    ></div>
+                    <div class="col-50">
+                        <br><br>Temperatur:<br><br>
+                        <div class="bigger"
+                            data-type="label"
+                            data-device="Aussentemperatur_unten"
+                            data-get="temperature"
+                            data-limits=[-10,10,20,28]
+                            data-colors=["blue","green","orange","red"]
+                            data-post-text="°C"
+                        ></div>
+                        <br><br>Luftfeuchtigkeit<br><br>
+                        <div class="bigger"
+                            data-type="label"
+                            data-device="Aussentemperatur_unten"
+                            data-get="humidity"
+                            data-limits=[0,40,70]
+                            data-colors=["red","green","red"]
+                            data-post-text="&#037;"
+                        ></div>
+                    </div>        
+                </div>
+            </li>
+
+            <li data-row="1" data-col="5" data-sizex="4" data-sizey="4">
+                <Header>Uhrzeit</header>
+                    <table width="95%" height="95%">
+                        <tr width="100%" height="5%">
+                        </tr>
+                        <tr width="100%" height="85%">
+                            <div class=""
+                                 data-type="analogclock"
+                                 data-size="370"
+                                 data-body-color="#B0E0E6"
+                                 data-second="none"
+                            ></div>
+                        </tr>
+                        <tr height="10%">
+                            <div data-type="clock" data-format="l, d. F Y" class="big"></div>
+                        </tr>
+                    </table>
+            </li>
+
+            <li data-row="3" data-col="1" data-sizex="2" data-sizey="2">
+                <Header>Temperatur innen</header>
+                <div class="sheet">
+                    <div class="col-50"
+                     data-type="scale"
+                     data-device="Innen_temperatur"
+                     data-get="state"
+                     data-limits=[10,20,23,30]
+                     data-colors=["blue","green","orange","red"]
+                     data-min="10"
+                     data-max="30"
+                     data-tick="1"
+                     data-orientation="vertical" 
+                     data-font-size="12"
+                     data-value-interval="1"
+                ></div>
+                    <div class="col-50">
+                      <br><br>Temperatur:<br><br>
+                      <div class="bigger"
+                            data-type="label"
+                            data-device="Innentemperatur"
+                            data-get="temperature"
+                            data-limits=[10,20,23,30]
+                            data-colors=["blue","green","orange","red"]
+                            data-post-text="°C"
+                        ></div>
+                        <br><br>Luftfeuchtigkeit<br><br>
+                        <div class="bigger"
+                            data-type="label"
+                            data-device="Innentemperatur"
+                            data-get="humidity"
+                            data-limits=[0,40,70]
+                            data-colors=["red","green","red"]
+                            data-post-text="&#037;"
+                        ></div>
+
+                </div>
+            </li>
+
+            <li data-row="3" data-col="3" data-sizex="2" data-sizey="2">
+                <Header>Warmwasser</header>
+                <div class="sheet">
+                    <div class="col-50"
+                     data-type="scale"
+                     data-device="Warmwasser_temperatur"
+                     data-get="state"
+                     data-limits=[0,25,35,56]
+                     data-colors=["blue","green","orange","red"]
+                     data-min="0"
+                     data-max="80"
+                     data-tick="1"
+                     data-orientation="vertical" 
+                     data-font-size="12"
+                     data-value-interval="5"
+                    ></div>
+                    <div class="col-50">
+                        <br><br>Warmwasser-Temperatur:<br><br>
+                        <div class="bigger"
+                            data-type="label"
+                            data-device="Warmwasser_temperatur"
+                            data-get="state"
+                            data-limits=[0,25,35,56]
+                            data-colors=["blue","green","orange","red"]
+                            data-post-text="°C"
+                        ></div>
+                        <br>Schichtspeicher unten:<br><br>
+                        <div class="small"
+                             data-type="label"
+                             data-device="Solaranlage"
+                             data-get="temperature_T02"
+                             data-limits=[0,25,35,56]
+                             data-colors=["blue","green","orange","red"]
+                             data-post-text="°C"
+                        ></div>
+                    </div>
+                </div>
+            </li>
+            <li data-row="5" data-col="1" data-sizex="8" data-sizey="2">
+                <header>DWD Vorhersage</header>
+                <table>
+                    <td>
+                        <div data-template="template_weather_DWD.html" data-parameter='{"var_device":"DWD","var_day":"fc0"}'></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div data-template="template_weather_DWD.html" data-parameter='{"var_device":"DWD","var_day":"fc1"}'></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div data-template="template_weather_DWD.html" data-parameter='{"var_device":"DWD","var_day":"fc2"}'></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div data-template="template_weather_DWD.html" data-parameter='{"var_device":"DWD","var_day":"fc3"}'></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div data-template="template_weather_DWD.html" data-parameter='{"var_device":"DWD","var_day":"fc4"}'></div>
+                        </div>
+                    </td>
+                </table>
+            </li>
+
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
